@@ -14,3 +14,5 @@ A demo for storing/getting data to/from AXEL blockchain with using OP_RETURN
 ## Demo
 
 [Demo log during executing on testnet](demo-testnet.md).
+
+![Block with embedded message inside](/demo-testnet.png)
