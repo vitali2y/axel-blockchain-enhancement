@@ -71,3 +71,20 @@ Thu Apr 16 05:26:23 EEST 2020
 2020-04-16 02:25:30 ProcessNewBlock : ACCEPTED in 15 milliseconds with size=690
 ~...~
 ```
+
+
+### File signing/verifying based on *signmessage* and *verifymessage* AXEL blockchain API calls:
+
+```
+➜  axel-blockchain-enhancement git:(v1.3.1) ✗ date && node ./sign-file.js --rpcuser=<my_rpcuser> --rpcpassword=<my_rpcpassword> --address=aQMzgHk9PCp2ZD1QPBT7o6gGKKAKQ5Wm6r --file=./demo-testnet.png
+Mon Apr 20 20:01:30 EEST 2020
+signature for further verifying of './demo-testnet.png' file:
+'ICnFJFJLTk8ea5JulrwSU0wrd8RSvm79EKwlQTebVAZIWMb1fq5/X8biQ/GZyVwh+MluXTRMv0+z0Qn912mTNJM='
+➜  axel-blockchain-enhancement git:(v1.3.1) ✗ date && node ./verify-file.js --rpcuser=<my_rpcuser> --rpcpassword=<my_rpcpassword> --address=aQMzgHk9PCp2ZD1QPBT7o6gGKKAKQ5Wm6r --sig=ICnFJFJLTk8ea5JulrwSU0wrd8RSvm79EKwlQTebVAZIWMb1fq5/X8biQ/GZyVwh+MluXTRMv0+z0Qn912mTNJM= --file=./demo-testnet.png
+Mon Apr 20 20:02:25 EEST 2020
+'./demo-testnet.png' file is verified:
+true
+➜  axel-blockchain-enhancement git:(v1.3.1) ✗ ls -la ./demo-testnet.png
+-rw-rw-r-- 1 vit vit 89538 Apr 16 13:08 ./demo-testnet.png
+➜  axel-blockchain-enhancement git:(v1.3.1) ✗
+```
